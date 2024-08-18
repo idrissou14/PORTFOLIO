@@ -1,0 +1,479 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Couleur or */
+}
+
+.initials {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700; /* Couleur or */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .initials {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+/* ABOUT ME */
+
+#about {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.content {
+    flex: 1;
+    max-width: 50%;
+}
+
+#about p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#about h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #e6b800;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-media a:hover {
+    background-color: #555;
+}
+
+.image-frame {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+}
+
+.image-frame img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 5px solid #444;
+}
+
+.presentation{
+    color: #e6b800;
+}
+
+/* SKILLS */
+
+#skills {
+    background-color: #2c2c2c;
+    padding: 50px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffd700; /* Couleur or */
+}
+
+.section-label {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-category ul li {
+    background-color: #333;
+    color: white;
+    /* border: 2px solid #fffffe; Couleur or sur les bords */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-category ul li i {
+    font-size: 24px;
+    color: #ffd900d2;
+}
+
+.skill-category ul li:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .skill-category ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-category ul li {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* PROJET */
+#projects {
+    background-color: #2c2c2c;
+    padding: 50px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffd700; /* Couleur or */
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #333;
+    color: white;
+    /* border: 2px solid #ffd700; Couleur or sur les bords */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #dbc2308c; /* Couleur or */
+}
+
+.project-item p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background-color: #333; /* Couleur or */
+     border: 1px solid #dbc2308c; /*Couleur or sur les bords */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-learn-more:hover {
+    background-color: #e0c200; /* Couleur or plus claire */
+    color: #fff;
+}
+
+.project-item:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* SERVICE */
+#services {
+    background-color: #2c2c2c;
+    padding: 50px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffd700; /* Couleur or */
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #dbc2308c; /* Couleur or */
+}
+
+.service-item p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.service-item:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* CONTACT */
+
+
+#contact {
+    background-color: #2c2c2c;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffd700; /* Couleur or */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #dbc2308c; /* Couleur or */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: #555; /* Bleu marine */
+    color: #dbc2308c; /* Couleur or pour le texte du bouton */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #777; /* Bleu marine plus foncé */
+    color: #ffd700;
+}
+
+/* FOOTER */
+
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ffd700; /* Bordure dorée */
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #dbc2308c; /* Couleur or */
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffd700; /* Couleur or pour le fond au survol */
+    color: #333; /* Couleur sombre pour le texte au survol */
+}
+
+/* Icônes spécifiques */
+.github {
+    color: #333; /* Couleur des icônes GitHub */
+}
+
+.instagram {
+    color: #e4405f; /* Couleur des icônes Instagram */
+}
+
+.mail {
+    color: #007bff; /* Couleur des icônes mail */
+}
+
+@media screen and (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links li {
+        margin: 5px 0;
+    }
+}
