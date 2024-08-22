@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdrissCodeCraft - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #eee;
+        }
+        .section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: #333;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            opacity: 0.7;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .section:hover {
+            opacity: 1;
+            transform: scale(1.02);
+            background: #444;
+        }
+        .section.active {
+            opacity: 1;
+            background: #555;
+        }
+        h2 {
+            text-align: center;
+            color: #dbc230;
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        .project-title {
+            margin-top: 0;
+            color: #dbc230;
+            font-size: 1.5rem;
+        }
+        .project-description {
+            margin: 10px 0;
+            color: #ccc;
+            font-size: 16px;
+        }
+        .tech-stack {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #dbc230;
+        }
+        .tech-stack span {
+            color: #eee;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .section {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .project-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="project-stock-management" class="section">
+        <h2 class="project-title">Stock Management Software</h2>
+        <p class="project-description">
+            <h3>Problem Statement:</h3>
+            <p>The company faced challenges in efficiently tracking its inventory, leading to difficulties in monitoring stock movements, handling inventory discrepancies, and generating accurate reports. The existing system was inadequate for managing stock entries, exits, and losses.</p>
+            
+            <h3>Solution Overview:</h3>
+            <p>To address these issues, a comprehensive Stock Management Software was developed. This solution is designed to streamline inventory management by providing a robust platform to track all stock-related activities. The software allows for efficient monitoring of stock entries, exits, and losses, ensuring accurate and real-time inventory control.</p>
+            
+            <h3>Key Features:</h3>
+            <ul>
+                <li><strong>Inventory Tracking:</strong> Enables users to record and monitor stock entries (incoming goods), exits (outgoing goods), and losses. This includes detailed logs of each transaction for transparency and accuracy.</li>
+                <li><strong>Real-Time Updates:</strong> Provides real-time updates on stock levels, allowing the company to respond promptly to inventory changes and avoid stockouts or overstocking.</li>
+                <li><strong>Reporting and Analytics:</strong> Generates comprehensive reports on stock movements, losses, and overall inventory status. These reports help in decision-making and improving inventory management practices.</li>
+                <li><strong>User Management:</strong> Supports multiple user roles with varying access levels, ensuring that sensitive inventory data is protected and managed appropriately.</li>
+                <li><strong>Alerts and Notifications:</strong> Sends alerts for critical stock levels, expired items, or discrepancies, helping to maintain optimal inventory levels and prevent issues.</li>
+            </ul>
+            <p class="tech-stack">
+                Front-End: <span>JavaFX</span><br>
+                Back-End: <span>Java, MySQL</span>
+            </p>
+            <h3>Benefits:</h3>
+            <ul>
+                <li><strong>Enhanced Inventory Control:</strong> The software provides better visibility and control over stock levels, helping to reduce discrepancies and improve inventory accuracy.</li>
+                <li><strong>Improved Efficiency:</strong> Automating inventory management tasks reduces manual effort and minimizes errors, leading to more efficient operations.</li>
+                <li><strong>Informed Decision-Making:</strong> Detailed reports and analytics provide valuable insights into inventory trends, helping the company make informed decisions and optimize stock management.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="project-student-management" class="section">
+        <h2 class="project-title">Student Management System</h2>
+        <p class="project-description">
+            <h3>Problem:</h3>
+            <p>The school faced challenges in effectively monitoring student punctuality, which made it difficult to track attendance, manage absences, and generate accurate reports. The existing system did not allow for efficient management and analysis of student attendance data.</p>
+            <h3>Solution Overview:</h3>
+            <p>To address these issues, a comprehensive student management system was developed. This platform is designed to monitor student punctuality, providing accurate tracking of attendance and absences, as well as detailed reports for effective student attendance management. In addition to improving internal management, the platform enhances the trust relationship between the institution and parents by keeping them informed in real-time through SMS alerts in case of absences.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Attendance Tracking:</strong> Allows users to record and track student attendance, including punctuality and absences. Provides a detailed log of each attendance entry for precise monitoring.</li>
+                <li><strong>Real-Time Updates:</strong> Offers real-time updates on student attendance, enabling quick responses to attendance issues and ensuring accurate records.</li>
+                <li><strong>Reports and Analysis:</strong> Generates comprehensive reports on student attendance, absences, and punctuality. These reports help identify attendance trends and improve management practices.</li>
+                <li><strong>User Management:</strong> Supports various user roles with different access levels, ensuring that sensitive student data is appropriately managed and accessed.</li>
+                <li><strong>Alerts and Notifications:</strong> Sends alerts for critical attendance issues, such as excessive absences or tardiness, helping to address problems quickly and efficiently.</li>
+                <li><strong>SMS API:</strong> Includes an API to send SMS messages to parents, alerting them in case of student absences. This feature ensures transparency and strengthens the trust relationship between the administration and parents by keeping them informed in real-time.</li>
+            </ul>
+            <p class="tech-stack">
+                Front-End: <span>HTML5/CSS3, Javascript</span><br>
+                Back-End: <span>MySQL, PHP</span>
+            </p>
+            <h4>Benefits:</h4>
+            <ul>
+                <li><strong>Improved Attendance Monitoring:</strong> Provides better visibility and control over student attendance, helping to identify trends and improve punctuality.</li>
+                <li><strong>Enhanced Efficiency:</strong> Automates attendance tracking processes, reducing manual effort and minimizing errors.</li>
+                <li><strong>Transparent Communication:</strong> The SMS API ensures effective communication with parents, reinforcing transparency and the trust relationship between the administration and families.</li>
+                <li><strong>Informed Decision-Making:</strong> Detailed reports and analyses offer valuable insights into attendance trends, aiding in effective management and decision-making.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="project-library-management" class="section">
+        <h2 class="project-title">Library Management System</h2>
+        <p class="project-description">
+            <h3>Problem:</h3>
+            <p>The library faced difficulties in efficiently managing its operations, including the handling of book borrowings and returns, catalog organization, and generating reports on library activities. Manual processes were time-consuming and prone to errors, impacting user satisfaction and staff efficiency.</p>
+            <h3>Solution Overview:</h3>
+            <p>To address these issues, a library management software was developed. This desktop application, built in Java, enables the efficient management of all library operations, from book cataloging to managing borrowings and returns, as well as generating activity reports.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Book Catalog Management:</strong> Facilitates the cataloging of books, including the addition, deletion, and updating of book details. The system supports comprehensive book information, including titles, authors, genres, and availability status.</li>
+                <li><strong>Borrowing and Returning Books:</strong> Manages book borrowings and returns with automated tracking. The system records each transaction, updates book availability status, and calculates due dates and late fees.</li>
+                <li><strong>User Management:</strong> Manages library users, including patrons and staff. The system supports different user roles and permissions, ensuring appropriate access to library features and data.</li>
+                <li><strong>Reports and Analytics:</strong> Generates detailed reports on library activities, including book borrowings, returns, and overdue items. Provides analytics to support decision-making and improve library operations.</li>
+                <li><strong>Notifications and Alerts:</strong> Sends notifications for overdue books, upcoming due dates, and other important events. This feature helps maintain timely returns and keep users informed.</li>
+            </ul>
+            <p class="tech-stack">
+                Front-End: <span>JavaFX</span><br>
+                Back-End: <span>Java, MySQL</span>
+            </p>
+            <h4>Benefits:</h4>
+            <ul>
+                <li><strong>Efficient Management:</strong> Automates library operations, reducing manual effort and minimizing errors, resulting in improved staff efficiency and user satisfaction.</li>
+                <li><strong>Enhanced Reporting:</strong> Provides comprehensive reports and analytics to support better decision-making and operational improvements.</li>
+                <li><strong>Improved User Experience:</strong> Streamlines the book borrowing and returning process, and keeps users informed with timely notifications and alerts.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="project-database-management" class="section">
+        <h2 class="project-title">Database Management Project</h2>
+        <p class="project-description">
+            
+            <p>
+                The database management project aimed to solve the challenges related to organizing and handling the company's critical data. The process began with an in-depth analysis of the existing system to identify specific needs and functional requirements. Once these elements were defined, the database modeling was carried out using PowerAMC, a powerful tool for designing robust and optimized databases. The resulting database enabled efficient data management, significantly improving the company's operational efficiency.
+            </p>
+        </p>
+        <p class="tech-stack">
+            Modeling: <span>PowerAMC15</span><br>
+            Back-End: <span>MySQL</span>
+        </p>
+    </section> 
+   
+</body>
+</html>
+
+<!-- <section id="project-database-management" class="section">
+    <h2 class="project-title">Database Management Project</h2>
+    <p class="project-description">
+        
+        <p>
+            The database management project aimed to solve the challenges related to organizing and handling the company's critical data. The process began with an in-depth analysis of the existing system to identify specific needs and functional requirements. Once these elements were defined, the database modeling was carried out using PowerAMC, a powerful tool for designing robust and optimized databases. The resulting database enabled efficient data management, significantly improving the company's operational efficiency.
+        </p>
+    </p>
+    <p class="tech-stack">
+        Modeling: <span>PowerAMC15</span><br>
+        Back-End: <span>MySQL</span>
+    </p>
+</section> -->
