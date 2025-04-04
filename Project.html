@@ -6,82 +6,183 @@
     <title>IdrissCodeCraft - Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="code(1).png" type="image/png">
+    <meta name="description" content="Detailed portfolio projects by Idrissou Nang - Software Developer">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #eee;
+        :root {
+            --primary-color: #ffd700;
+            --primary-dark: #e6b800;
+            --bg-dark: #121212;
+            --bg-light: #1c1c1c;
+            --bg-medium: #2c2c2c;
+            --text-light: #ffffff;
+            --text-muted: #cccccc;
+            --accent-color: #007bff;
+            --success-color: #28a745;
+            --border-radius: 8px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --section-padding: 30px;
+            --transition-normal: all 0.3s ease;
         }
+        
         .section {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-            background: #333;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-            opacity: 0.7;
-            transition: opacity 0.3s, transform 0.3s;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: rgba(51, 51, 51, 0.7);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition-normal);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+            animation-delay: calc(var(--order) * 0.1s);
         }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .section:hover {
-            opacity: 1;
-            transform: scale(1.02);
-            background: #444;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(68, 68, 68, 0.8);
         }
-        .section.active {
-            opacity: 1;
-            background: #555;
-        }
-        h2 {
+        
+        h2.project-title {
             text-align: center;
-            color: #dbc230;
+            color: var(--primary-color);
             font-size: 2rem;
             margin-top: 0;
+            position: relative;
+            padding-bottom: 15px;
         }
-        .project-title {
-            margin-top: 0;
-            color: #dbc230;
-            font-size: 1.5rem;
+        
+        h2.project-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
         }
+        
         .project-description {
-            margin: 10px 0;
-            color: #ccc;
+            margin: 20px 0;
+            color: var(--text-muted);
             font-size: 16px;
+            line-height: 1.6;
         }
+        
         .tech-stack {
-            margin: 10px 0;
-            font-weight: bold;
-            color: #dbc230;
+            margin: 20px 0;
+            font-weight: 600;
+            color: var(--primary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            background-color: rgba(255, 255, 255, 0.05);
+            display: inline-block;
         }
+        
         .tech-stack span {
-            color: #eee;
+            color: var(--text-light);
+            font-weight: normal;
         }
+        
+        h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
+        
         ul {
             padding-left: 20px;
+            color: var(--text-muted);
         }
+        
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
+        
+        li strong {
+            color: var(--text-light);
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: #333;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition-normal);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            text-align: center;
+        }
+        
+        .back-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+        
+        .back-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
         @media (max-width: 768px) {
             .section {
-                padding: 15px;
+                padding: 20px;
+                margin: 20px 15px;
             }
-            h2 {
+            
+            h2.project-title {
                 font-size: 1.5rem;
-            }
-            .project-title {
-                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <section id="project-stock-management" class="section">
+    <!-- Animation de chargement -->
+    <div class="loading-animation">
+        <div class="loader"></div>
+    </div>
+
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="initials">MIN</div>
+    </header>
+    
+    <div class="back-container">
+        <a href="index.html#projects" class="back-button"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    </div>
+    
+    <section id="project-stock-management" class="section" style="--order: 1">
         <h2 class="project-title">Stock Management Software</h2>
-        <p class="project-description">
+        <div class="project-description">
             <h3>Problem Statement:</h3>
             <p>The company faced challenges in efficiently tracking its inventory, leading to difficulties in monitoring stock movements, handling inventory discrepancies, and generating accurate reports. The existing system was inadequate for managing stock entries, exits, and losses.</p>
             
@@ -106,17 +207,17 @@
                 <li><strong>Improved Efficiency:</strong> Automating inventory management tasks reduces manual effort and minimizes errors, leading to more efficient operations.</li>
                 <li><strong>Informed Decision-Making:</strong> Detailed reports and analytics provide valuable insights into inventory trends, helping the company make informed decisions and optimize stock management.</li>
             </ul>
-        </p>
+        </div>
     </section>
 
-    <section id="project-student-management" class="section">
+    <section id="project-student-management" class="section" style="--order: 2">
         <h2 class="project-title">Student Management System</h2>
-        <p class="project-description">
+        <div class="project-description">
             <h3>Problem:</h3>
             <p>The school faced challenges in effectively monitoring student punctuality, which made it difficult to track attendance, manage absences, and generate accurate reports. The existing system did not allow for efficient management and analysis of student attendance data.</p>
             <h3>Solution Overview:</h3>
             <p>To address these issues, a comprehensive student management system was developed. This platform is designed to monitor student punctuality, providing accurate tracking of attendance and absences, as well as detailed reports for effective student attendance management. In addition to improving internal management, the platform enhances the trust relationship between the institution and parents by keeping them informed in real-time through SMS alerts in case of absences.</p>
-            <h4>Key Features:</h4>
+            <h3>Key Features:</h3>
             <ul>
                 <li><strong>Attendance Tracking:</strong> Allows users to record and track student attendance, including punctuality and absences. Provides a detailed log of each attendance entry for precise monitoring.</li>
                 <li><strong>Real-Time Updates:</strong> Offers real-time updates on student attendance, enabling quick responses to attendance issues and ensuring accurate records.</li>
@@ -129,24 +230,24 @@
                 Front-End: <span>HTML5/CSS3, Javascript</span><br>
                 Back-End: <span>MySQL, PHP</span>
             </p>
-            <h4>Benefits:</h4>
+            <h3>Benefits:</h3>
             <ul>
                 <li><strong>Improved Attendance Monitoring:</strong> Provides better visibility and control over student attendance, helping to identify trends and improve punctuality.</li>
                 <li><strong>Enhanced Efficiency:</strong> Automates attendance tracking processes, reducing manual effort and minimizing errors.</li>
                 <li><strong>Transparent Communication:</strong> The SMS API ensures effective communication with parents, reinforcing transparency and the trust relationship between the administration and families.</li>
                 <li><strong>Informed Decision-Making:</strong> Detailed reports and analyses offer valuable insights into attendance trends, aiding in effective management and decision-making.</li>
             </ul>
-        </p>
+        </div>
     </section>
 
-    <section id="project-library-management" class="section">
+    <section id="project-library-management" class="section" style="--order: 3">
         <h2 class="project-title">Library Management System</h2>
-        <p class="project-description">
+        <div class="project-description">
             <h3>Problem:</h3>
             <p>The library faced difficulties in efficiently managing its operations, including the handling of book borrowings and returns, catalog organization, and generating reports on library activities. Manual processes were time-consuming and prone to errors, impacting user satisfaction and staff efficiency.</p>
             <h3>Solution Overview:</h3>
             <p>To address these issues, a library management software was developed. This desktop application, built in Java, enables the efficient management of all library operations, from book cataloging to managing borrowings and returns, as well as generating activity reports.</p>
-            <h4>Key Features:</h4>
+            <h3>Key Features:</h3>
             <ul>
                 <li><strong>Book Catalog Management:</strong> Facilitates the cataloging of books, including the addition, deletion, and updating of book details. The system supports comprehensive book information, including titles, authors, genres, and availability status.</li>
                 <li><strong>Borrowing and Returning Books:</strong> Manages book borrowings and returns with automated tracking. The system records each transaction, updates book availability status, and calculates due dates and late fees.</li>
@@ -158,42 +259,58 @@
                 Front-End: <span>JavaFX</span><br>
                 Back-End: <span>Java, MySQL</span>
             </p>
-            <h4>Benefits:</h4>
+            <h3>Benefits:</h3>
             <ul>
                 <li><strong>Efficient Management:</strong> Automates library operations, reducing manual effort and minimizing errors, resulting in improved staff efficiency and user satisfaction.</li>
                 <li><strong>Enhanced Reporting:</strong> Provides comprehensive reports and analytics to support better decision-making and operational improvements.</li>
                 <li><strong>Improved User Experience:</strong> Streamlines the book borrowing and returning process, and keeps users informed with timely notifications and alerts.</li>
             </ul>
-        </p>
+        </div>
     </section>
 
-    <section id="project-database-management" class="section">
+    <section id="project-database-management" class="section" style="--order: 4">
         <h2 class="project-title">Database Management Project</h2>
-        <p class="project-description">
-            
+        <div class="project-description">
+            <h3>Overview:</h3>
             <p>
                 The database management project aimed to solve the challenges related to organizing and handling the company's critical data. The process began with an in-depth analysis of the existing system to identify specific needs and functional requirements. Once these elements were defined, the database modeling was carried out using PowerAMC, a powerful tool for designing robust and optimized databases. The resulting database enabled efficient data management, significantly improving the company's operational efficiency.
             </p>
-        </p>
-        <p class="tech-stack">
-            Modeling: <span>PowerAMC15</span><br>
-            Back-End: <span>MySQL</span>
-        </p>
+            <h3>Process:</h3>
+            <ul>
+                <li><strong>Needs Analysis:</strong> Conducted a thorough analysis of the organization's data requirements, identifying the key entities, attributes, and relationships needed in the database.</li>
+                <li><strong>Conceptual Modeling:</strong> Created an Entity-Relationship Diagram (ERD) to represent the logical structure of the database, including entities, attributes, and relationships.</li>
+                <li><strong>Physical Design:</strong> Transformed the conceptual model into a physical database schema, optimizing table structures, establishing appropriate relationships, and implementing constraints.</li>
+                <li><strong>Implementation:</strong> Developed the database using MySQL, creating tables, defining relationships, and implementing constraints according to the designed schema.</li>
+                <li><strong>Testing and Optimization:</strong> Conducted extensive testing to ensure data integrity and optimize query performance through indexing and query optimization techniques.</li>
+            </ul>
+            <p class="tech-stack">
+                Modeling: <span>PowerAMC15</span><br>
+                Back-End: <span>MySQL</span>
+            </p>
+            <h3>Results:</h3>
+            <ul>
+                <li><strong>Improved Data Organization:</strong> The database provided a structured approach to organizing the company's data, making it easier to access and manage.</li>
+                <li><strong>Enhanced Data Integrity:</strong> Implementation of proper constraints and relationships ensured data consistency and reduced errors.</li>
+                <li><strong>Efficient Queries:</strong> Optimized database design allowed for efficient data retrieval and manipulation, improving system performance.</li>
+                <li><strong>Scalability:</strong> The database was designed to accommodate future growth, ensuring that it would continue to meet the organization's needs as it expanded.</li>
+            </ul>
+        </div>
     </section> 
    
+    <div class="back-container">
+        <a href="index.html#projects" class="back-button"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    </div>
+    
+    <footer>
+        <p>Follow me on:</p>
+        <ul class="social-links">
+            <li><p><i class="fab fa-github"></i> idrissou14</p></li>
+            <li><p><i class="fab fa-instagram"></i> iamidriss_taylor</p></li>
+            <li><p><i class="fas fa-envelope"></i> idrissou02nang01@gmail.com</p></li>
+        </ul>
+    </footer>
+
+    <!-- Script pour les animations -->
+    <script src="index.js"></script>
 </body>
 </html>
-
-<!-- <section id="project-database-management" class="section">
-    <h2 class="project-title">Database Management Project</h2>
-    <p class="project-description">
-        
-        <p>
-            The database management project aimed to solve the challenges related to organizing and handling the company's critical data. The process began with an in-depth analysis of the existing system to identify specific needs and functional requirements. Once these elements were defined, the database modeling was carried out using PowerAMC, a powerful tool for designing robust and optimized databases. The resulting database enabled efficient data management, significantly improving the company's operational efficiency.
-        </p>
-    </p>
-    <p class="tech-stack">
-        Modeling: <span>PowerAMC15</span><br>
-        Back-End: <span>MySQL</span>
-    </p>
-</section> -->

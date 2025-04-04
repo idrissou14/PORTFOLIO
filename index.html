@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="code(1).png" type="image/png">
+    <meta name="description" content="Idrissou Nang - Software Developer Portfolio showcasing web, mobile and desktop development skills and projects">
 </head>
 <body>
-    <header>
+    <!-- Animation de chargement -->
+    <div class="loading-animation">
+        <div class="loader"></div>
+    </div>
+
+    <header id="header">
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -23,27 +29,27 @@
     </header>
     
     <section id="about">
-        <div class="content">
+        <div class="content animate-on-scroll">
             <p class="presentation">HELLO, I'm</p>
             <h1>IDRISSOU NANG</h1>
             <p>Software Developer.</p>
             <p>I'm a passionate software engineer with a background in computer science and a love for technology.</p>
             <a href="CV.pdf" class="button">View My Resume</a>
             <div class="social-media">
-                <a href="https://github.com/idrissou14">GitHub</a>
-                <a href=" https://wa.me/23791299440 ">WhatsApp</a>
-                <a href="https://www.instagram.com/iamidriss_taylor?utm_source=qr&igsh=dnN4eWlkd3BqdDJv ">Instagram</a>
+                <a href="https://github.com/idrissou14" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://wa.me/23791299440" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.instagram.com/iamidriss_taylor?utm_source=qr&igsh=dnN4eWlkd3BqdDJv" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
         </div>
-        <div class="image-frame">
-            <img src="Logo.png" alt="Your Image">
+        <div class="image-frame animate-on-scroll">
+            <img src="Logo.png" alt="Idrissou Nang - Software Developer">
         </div>
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <p class="section-label">Here are some of the technologies I work with:</p>
-        <div class="skill-category">
+        <h2 class="animate-on-scroll">Skills</h2>
+        <p class="section-label animate-on-scroll">Here are some of the technologies I work with:</p>
+        <div class="skill-category animate-on-scroll">
             <ul>
                 <li><i class="fas fa-database"></i> MySQL</li>
                 <li><i class="fab fa-html5"></i> HTML5</li>
@@ -60,36 +66,36 @@
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <p class="section-label">Projects I've Worked On:</p>
+        <h2 class="animate-on-scroll">Projects</h2>
+        <p class="section-label animate-on-scroll">Projects I've Worked On:</p>
         <div class="project-list">
-            <div class="project-item">
-                <img src="Stocks.jpg" alt="Web Development">
+            <div class="project-item animate-on-scroll">
+                <img src="Stocks.jpg" alt="Stock Management Software">
                 <h3>Stock Management Software</h3>
                 <p>
                     A streamlined application for tracking inventory, managing stock movements, and generating reports to optimize warehouse efficiency.
                 </p>
                 <a href="Project.html" class="btn-learn-more">Learn More</a>
             </div>
-            <div class="project-item">
-                <img src="School Management Dashboard.jpeg" alt="Mobile Development">
-                <h3>Student management system</h3>
+            <div class="project-item animate-on-scroll">
+                <img src="School Management Dashboard.jpeg" alt="Student Management System">
+                <h3>Student Management System</h3>
                 <p>
-                    A platform designed to monitor student punctuality, providing accurate tracking of attendance and absences with detailed reports for effective management of student attendance.
+                    A platform designed to monitor student punctuality, providing accurate tracking of attendance and absences with detailed reports for effective management.
                 </p>
                 <a href="Project.html" class="btn-learn-more">Learn More</a>
             </div>
-            <div class="project-item">
-                <img src="classement.jpg" alt="Desktop Applications" class="project-img">
-                <h3>library Management system</h3>
+            <div class="project-item animate-on-scroll">
+                <img src="classement.jpg" alt="Library Management System" class="project-img">
+                <h3>Library Management System</h3>
                 <p>
-                    A comprehensive system for managing library operations, including cataloging books, tracking borrowings and returns, and generating reports to streamline library administration.
+                    A comprehensive system for managing library operations, including cataloging books, tracking borrowings and returns, and generating reports.
                 </p>
                 <a href="Project.html" class="btn-learn-more">Learn More</a>
             </div>
-            <div class="project-item">
-                <img src="1_872.jpeg" alt="Database Management">
-                <h3>Database Management for [Private Project] </h3>
+            <div class="project-item animate-on-scroll">
+                <img src="1_872.jpeg" alt="Database Management Project">
+                <h3>Database Management Project</h3>
                 <p>Responsible for the design, optimization, and backup of the database to ensure data integrity and performance.</p>
                 <a href="Project.html" class="btn-learn-more">Learn More</a>
             </div>
@@ -97,26 +103,26 @@
     </section>
 
     <section id="services">
-        <h2>Services</h2>
+        <h2 class="animate-on-scroll">Services</h2>
         <div class="service-list">
-            <div class="service-item">
-                <h3>Web Development</h3>
-                <p>Creating responsive and dynamic websites to enhance your online presence.</p>
+            <div class="service-item animate-on-scroll">
+                <h3><i class="fas fa-globe"></i> Web Development</h3>
+                <p>Creating responsive and dynamic websites to enhance your online presence using modern technologies like React, Laravel, and more.</p>
                
             </div>
-            <div class="service-item">
-                <h3>Mobile Development</h3>
-                <p>Building custom mobile applications for both Android and iOS platforms.</p>
+            <div class="service-item animate-on-scroll">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                <p>Building custom mobile applications for both Android and iOS platforms to reach users on their preferred devices.</p>
                 
             </div>
-            <div class="service-item">
-                <h3>Desktop Applications</h3>
-                <p>Developing robust desktop applications tailored to your specific needs.</p>
+            <div class="service-item animate-on-scroll">
+                <h3><i class="fas fa-laptop-code"></i> Desktop Applications</h3>
+                <p>Developing robust desktop applications tailored to your specific needs using Java, VB.Net, and other powerful technologies.</p>
                 
             </div>
-            <div class="service-item">
-                <h3>Database Management</h3>
-                <p>Efficient and secure management of your data systems for optimal performance.</p>
+            <div class="service-item animate-on-scroll">
+                <h3><i class="fas fa-database"></i> Database Management</h3>
+                <p>Efficient and secure management of your data systems for optimal performance, ensuring data integrity and accessibility.</p>
                 
             </div>
         </div>
@@ -124,8 +130,8 @@
     
 
     <section id="contact">
-        <h2>Contact</h2>
-        <form  action="https://formspree.io/f/mnnabaye" method="post" class="contact-form" id="contact-form">
+        <h2 class="animate-on-scroll">Contact</h2>
+        <form action="https://formspree.io/f/mnnabaye" method="post" class="contact-form animate-on-scroll" id="contact-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
             
@@ -135,7 +141,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
     
-            <button type="submit" class="btn-submit">Send</button>
+            <button type="submit" class="btn-submit">Send Message</button>
         </form>
     </section>
     
@@ -143,43 +149,13 @@
     <footer>
         <p>Follow me on:</p>
         <ul class="social-links">
-            <li><p><i class="fab fa-github"></i>_idrissou14</p></li>
-            <li><p><i class="fab fa-instagram"></i>_iamidriss_taylor</p></li>
-            <li><p><i class="fas fa-envelope"></i>_idrissou02nang01@gmail.com</p></li>
-           
+            <li><p><i class="fab fa-github"></i> idrissou14</p></li>
+            <li><p><i class="fab fa-instagram"></i> iamidriss_taylor</p></li>
+            <li><p><i class="fas fa-envelope"></i> idrissou02nang01@gmail.com</p></li>
         </ul>
     </footer>
 
-        <!-- Script EmailJS -->
-    <!-- <script type="text/javascript">
-        (function(){
-            emailjs.init("qkOjBVLm8csvq8GCu"); // Remplacez par votre USER_ID
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche le rechargement de la page
-
-            // Récupération des valeurs du formulaire
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            // Envoi de l'email via EmailJS
-            emailjs.send("service_6sv3wqa", "template_lfhdw3o", {
-                from_name: name,
-                from_email: email,
-                message: message,
-            })
-            .then(function(response) {
-                alert("Message sent successfully!");
-            }, function(error) {
-                alert("Failed to send message, please try again.");
-            });
-        });
-    </script> -->
-    
-  
-
-    
+    <!-- Script pour les animations -->
+    <script src="index.js"></script>
 </body>
 </html>
